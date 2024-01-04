@@ -63,7 +63,7 @@ class C2_HighArray {
     }
     */
 	
-	
+	/*
 	//Question 2, Question 3
 	public long removeMax() {
         if (nElems == 0) {
@@ -89,8 +89,40 @@ class C2_HighArray {
 
         return max; // Return the maximum value
     }
+    */
+	
+	/*
+	//Question 5
+	public void noDups(){
+		if (nElems < 2) { 
+            return;
+        }
+
+        final long DUPLICATE_MARKER = -1; 
+
+        // Identify duplicates and mark them
+        for (int i = 0; i < nElems - 1; i++) {
+            if (a[i] == DUPLICATE_MARKER) continue; 
+
+            for (int j = i + 1; j < nElems; j++) {
+                if (a[i] == a[j]) {
+                    a[j] = DUPLICATE_MARKER; 
+                }
+            }
+        }
+
+        int writePos = 0;
+        for (int readPos = 0; readPos < nElems; readPos++) {
+            if (a[readPos] != DUPLICATE_MARKER) {
+                a[writePos++] = a[readPos];
+            }
+        }
+        nElems = writePos; 
+    }
+	*/
 	
 }
+
 //////////////////////////////////////////////////////////////
 //////////////////CLASS C2_HighArrayApp//////////////////////
 /////////////////////////////////////////////////////////////
@@ -100,11 +132,9 @@ class C2_HighArrayApp{
 		C2_HighArray arr;
 	    arr = new C2_HighArray(maxSize);
 		
-		
-        C2_HighArray sortedArr = new C2_HighArray(maxSize);
+		//Question3
+        //C2_HighArray sortedArr = new C2_HighArray(maxSize);
         
-
-		
 		arr.insert(77);
 		arr.insert(99);
 		arr.insert(44);
@@ -133,8 +163,8 @@ class C2_HighArrayApp{
 		//Question 2
 		//System.out.println("Removed highest key: " + arr.removeMax());
 		
+		/*
 		//Question 3
-		
 		//Sorting process
         while (true) {
             long max = arr.removeMax();
@@ -146,6 +176,7 @@ class C2_HighArrayApp{
 		
 		System.out.println("Sorted array (inversely sorted): " );
         sortedArr.display();
+        */
 	}
 }
 
