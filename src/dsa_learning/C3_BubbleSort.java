@@ -69,6 +69,33 @@ class C3_BubbleSort {
 	}
 	
 	
+	/*
+	
+	//Question 4
+	public void oddEvenSort() {
+		boolean isSorted = false;
+		
+		while (!isSorted) {
+	        isSorted = true;
+
+	        
+	        for (int j = 1; j < nElems - 1; j += 2) {
+	            if (a[j] > a[j + 1]) {
+	                swap(j, j + 1);
+	                isSorted = false;
+	            }
+	        }
+
+	        
+	        for (int j = 0; j < nElems - 1; j += 2) {
+	            if (a[j] > a[j + 1]) {
+	                swap(j, j + 1);
+	                isSorted = false;
+	            }
+	        }
+	    }
+	}
+	*/
 	
 	private void swap(int one, int two) {
 		long temp = a[one];
@@ -99,8 +126,12 @@ class C3_BubbleSortApp{
 		
 		arr.display();
 		
+		//Question 4
+		//arr.oddEvenSort();
+		
 		arr.bubbleSort();
 		arr.display();
+		
 		
 	}
 }
