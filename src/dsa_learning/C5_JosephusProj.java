@@ -34,7 +34,6 @@ class C5_JosephusProj {
 
 class C5_JosephusApp {
     public static void main(String[] args) {
-        // Number of people in the circle, counting number, starting position
         C5_JosephusProj josephus = new C5_JosephusProj(7, 3, 1);
         josephus.startElimination();
     }
